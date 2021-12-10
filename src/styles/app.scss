@@ -1,0 +1,36 @@
+@import 'initials';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    &:hover{
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+li{
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%; 
+    background: $black;
+    color: white;
+}
+
+.container{
+    width: 100%;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    @include laptop{
+        padding-right: 1rem !important;
+        padding-left: 1rem !important;
+    }  
+}

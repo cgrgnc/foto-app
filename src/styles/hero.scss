@@ -1,0 +1,208 @@
+@import 'initials';
+
+.hero-main{
+    .hero-body{
+        @include flex-column;
+        margin-top: 12rem;
+        align-items: center;
+        .title{
+            @include font-windsong;
+            font-size: 3.8rem;
+            color: $gold;
+            font-weight: 600;
+            margin-bottom: 5rem;
+        }
+        .title2{
+            font-size: 7.8rem;
+            @include font-raleway;
+            font-weight: 200;
+            margin-bottom: 5rem;
+            @include minitablet{
+                font-size: 5rem;
+            }
+        }
+        .text{
+            font-size: 2rem;
+            @include font-inter;
+            font-weight: 200;
+            color: white;
+            opacity: .8;
+            margin-bottom: 5rem;
+        }
+        
+        .icon{
+            color: $gold;
+            font-size: 6rem;
+            margin-bottom: 5rem;
+        }
+        .head{
+            align-self: flex-start;
+        }
+        .images{
+            @include flex-row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 10rem;
+            img{
+                width: 49%;
+                height: 1000px;
+                object-fit: cover;
+                &:last-child{
+                    margin-left: 1%;
+                }
+                &:hover{
+                    transform: scale(1.02);
+                    transition: all 400ms;
+                }
+                @include tablet{
+                    height: 700px;
+                }
+            }
+            @include minitablet{
+                @include flex-column;
+                img{
+                    width: 100%;
+                    &:last-child{
+                        margin-left: 0;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+        .center{
+            
+            width: 50%;
+            @include minitablet{
+                align-self: flex-start;
+            }
+        }
+        .back-center{
+            background: #0C0C0C;
+        }
+        .text-footer{
+            opacity: 1;
+            font-size: 4rem;
+            margin-bottom: 0;
+            @include tablet{
+                font-size: 2rem;
+            }
+        }
+        .socials{
+            @include flex-row;
+            align-items: center;
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 4rem;
+            .fab{
+                margin-left: 2rem;
+                cursor: pointer;
+                &:hover{
+                    color: $gold;
+                }
+            }
+        }
+        .email{
+            &:hover{
+                color: $gold;
+            }
+        }
+        
+    }
+    .back-center{
+        @include flex-column;
+        align-items: center;
+        background: #0C0C0C;
+        .center{
+            width: 50%
+        }
+        .title{
+            @include font-windsong;
+            font-size: 3.8rem;
+            color: $gold;
+            font-weight: 600;
+            margin-bottom: 5rem;
+        }
+        .title2{
+            font-size: 7.8rem;
+            @include font-raleway;
+            font-weight: 200;
+            margin-bottom: 5rem;
+            @include minitablet{
+                font-size: 5rem;
+            }
+        }
+        .text{
+            font-size: 2rem;
+            @include font-inter;
+            font-weight: 200;
+            color: white;
+            opacity: .8;
+            margin-bottom: 5rem;
+        }
+        
+        form{
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            padding-top: 6rem;
+            position: relative;
+            border-radius: 2rem;
+            border: 1px solid $gold;
+            z-index: 1;
+            .envelop{
+                position: absolute;
+                top: 0;
+                left: 50%;
+                padding: 0 2rem;
+                transform: translate(-50%,-50%);
+                border: 1px solid $gold;
+                border-radius: 1rem;
+                text-align: center;
+                font-size: 3rem;
+                background: #0C0C0C;
+                .fa-envelope{
+                    color: $gold;
+                }
+            }
+            input, textarea, .button{
+                padding: 1.2rem;
+                margin: 1.2rem auto;
+                border: 1px solid #ccc;
+                color: #ddd;
+                background-color: #222;
+                border-radius: 1rem;
+                display: block;
+                width: 70%;
+                @include minitablet{
+                    width: 90%;
+                }
+            }
+            textarea{
+                height: 200px;
+                resize: none;
+            }
+            .button{
+                width: 20%;
+                padding-left: 1%;
+                padding-right: 1%;
+                cursor: pointer;
+                transition: .35s;
+                &:hover{
+                    color: $gold;
+                    border-color: $gold;
+                }
+            }
+            @include minitablet{
+                padding-right: 1rem;
+                padding-left: 1rem;
+            }
+
+        }
+        @include tablet{
+            .center{
+                width: 95%;
+            }
+        }
+    }
+    
+    
+}

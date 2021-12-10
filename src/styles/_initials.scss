@@ -1,0 +1,53 @@
+$gold: #B48570;
+$black: #050505;
+$grey: #747171;
+
+
+@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
+@mixin font-windsong{
+    font-family: 'WindSong', cursive;
+}
+
+// for titles
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+@mixin font-raleway{
+    font-family: 'Raleway', sans-serif;
+}
+
+// for text
+@mixin font-inter{
+    font-family: 'Inter', sans-serif;
+}
+
+@mixin laptop {
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: 800px){
+        @content;
+    }
+}
+
+@mixin minitablet {
+    @media screen and (max-width: 600px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
