@@ -5,16 +5,32 @@
         @include flex-column;
         margin-top: 12rem;
         align-items: center;
+        .header{
+            @include font-poiret;
+            color: white;
+            font-weight: 800;
+            font-size: 2.5rem;
+            @include flex-row;
+            justify-content: flex-end;
+            width: 80%;
+            cursor: pointer;
+            .header-cat{
+                margin-left: 2rem;
+                &:hover, &:active{
+                    color: $gold;
+                }
+            }
+        }
         .title{
-            @include font-windsong;
-            font-size: 3.8rem;
+            @include font-corinthia;
+            font-size: 6rem;
             color: $gold;
             font-weight: 600;
             margin-bottom: 5rem;
         }
         .title2{
             font-size: 7.8rem;
-            @include font-raleway;
+            @include font-poiret;
             font-weight: 200;
             margin-bottom: 5rem;
             @include minitablet{
@@ -29,6 +45,12 @@
             opacity: .8;
             margin-bottom: 5rem;
         }
+        .cameraicon{
+            filter: invert(57%) sepia(13%) saturate(989%) hue-rotate(333deg) brightness(96%) contrast(89%);
+            width: 4rem;
+            align-self: flex-start;
+            margin-bottom: 4rem;
+        }
         
         .icon{
             color: $gold;
@@ -38,12 +60,32 @@
         .head{
             align-self: flex-start;
         }
-        .images{
-            @include flex-row;
-            justify-content: space-between;
+        .carousel{
+            
             width: 100%;
+            position: relative;
+        }
+        .slider-wrapper{
+            width: 100%;
+            position: relative;
+            height: 1000px;
+            overflow: hidden;
+        }
+        .inner-wrapper{
+            width: 400%;
+            left: -100%;
+            position: relative;
+            @include flex-row;
+        }
+        .slide{
+            @include flex-row;
+            // justify-content: space-between;
+            width: 25%;
+            height: 1000px;
             margin-bottom: 10rem;
-            img{
+            float: left;
+            .image{
+                position: relative;
                 width: 49%;
                 height: 1000px;
                 object-fit: cover;
@@ -57,10 +99,22 @@
                 @include tablet{
                     height: 700px;
                 }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .cc-text{
+                position: absolute;
+                bottom: 2rem;
+                left: 1rem;
+                font-size: 2rem;
+                @include font-poiret;
             }
             @include minitablet{
                 @include flex-column;
-                img{
+                .image{
                     width: 100%;
                     &:last-child{
                         margin-left: 0;
@@ -116,15 +170,15 @@
             width: 50%
         }
         .title{
-            @include font-windsong;
-            font-size: 3.8rem;
+            @include font-corinthia;
+            font-size: 8rem;
             color: $gold;
             font-weight: 600;
             margin-bottom: 5rem;
         }
         .title2{
             font-size: 7.8rem;
-            @include font-raleway;
+            @include font-poiret;
             font-weight: 200;
             margin-bottom: 5rem;
             @include minitablet{

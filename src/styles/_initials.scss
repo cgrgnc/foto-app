@@ -2,16 +2,14 @@ $gold: #B48570;
 $black: #050505;
 $grey: #747171;
 
-
-@import url('https://fonts.googleapis.com/css2?family=WindSong:wght@400;500&display=swap');
-@mixin font-windsong{
-    font-family: 'WindSong', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Corinthia&display=swap');
+@mixin font-corinthia{
+    font-family: 'Corinthia', cursive; 
 }
 
-// for titles
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
-@mixin font-raleway{
-    font-family: 'Raleway', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+@mixin font-poiret{
+    font-family: 'Poiret One', cursive;
 }
 
 // for text
