@@ -54,7 +54,7 @@
     }
     @include minitablet{
         @include flex-column;
-        .image{
+        .image2{
             width: 100%;
             &:last-child{
                 margin-left: 0;
