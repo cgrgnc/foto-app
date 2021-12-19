@@ -19,7 +19,6 @@
 }
 .slide2{
     @include flex-row;
-    // justify-content: space-between;
     width: 25%;
     height: 1000px;
     margin-bottom: 10rem;
@@ -38,6 +37,9 @@
         }
         @include tablet{
             height: 700px;
+        }
+        @include minitablet{
+            height: 500px;
         }
         img{
             width: 100%;
